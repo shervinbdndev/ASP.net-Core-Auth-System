@@ -1,0 +1,90 @@
+@model AuthSystem.Models.ViewModels.RegisterViewModel
+@{
+    ViewData["Title"] = "ثبت نام";
+}
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<style type="text/css">
+    body {
+        background-color: #121212;
+        color: #ffffff;
+    }
+
+    .form-container {
+        background-color: #1e1e1e;
+        padding: 50px;
+        max-width:700px;
+        width: 100%;
+        border-radius: 10px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn-custom {
+        background-color: #3b82f6;
+        border-color: #2563eb;
+    }
+
+    .btn-custom:hover {
+        background-color: #2563eb;
+        border-color: #1d4ed8;
+        transform: scale(1.05);
+    }
+
+    input.form-control {
+        background-color: #2a2a2a;
+        border-color: #444;
+        color: #ffffff;
+    }
+
+    label {
+        color: #bfbfbf;
+    }
+</style>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-10">
+            <div class="form-container mt-5">
+                <h3 class="text-center mb-4">ثبت نام</h3>
+                <form asp-action="Register" method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="row mb-3">
+                        <div class="col-lg-6 col-md-12 mb-3">
+                            <label for="Input_UserName" class="form-label">نام کاربری</label>
+                            <input type="text" class="form-control" id="Input_UserName" name="UserName" placeholder="نام کاربری خود را وارد کنید">
+                        </div>
+                        <div class="col-lg-6 col-md-12 mb-3">
+                            <label for="Input_FirstName" class="form-label">نام</label>
+                            <input type="text" class="form-control" id="Input_FirstName" name="FirstName" placeholder="نام خود را وارد کنید">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-lg-6 col-md-12 mb-3">
+                            <label for="Input_LastName" class="form-label">نام خانوادگی</label>
+                            <input type="text" class="form-control" id="Input_LastName" name="LastName" placeholder="نام خانوادگی خود را وارد کنید">
+                        </div>
+                        <div class="col-lg-6 col-md-12 mb-3">
+                            <label for="Input_Email" class="form-label">ایمیل</label>
+                            <input type="email" class="form-control" id="Input_Email" name="Email" placeholder="ایمیل خود را وارد کنید">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-lg-6 col-md-12 mb-3">
+                            <label for="Input_Password" class="form-label">رمز ورود</label>
+                            <input type="password" class="form-control" id="Input_Password" name="Password" placeholder="رمز ورود خود را وارد کنید">
+                        </div>
+                        <div class="col-lg-6 col-md-12 mb-3">
+                            <label for="Input_ConfirmPassword" class="form-label">تایید رمز ورود</label>
+                            <input type="password" class="form-control" id="Input_ConfirmPassword" name="ConfirmPassword" placeholder="رمز خود را دوباره وارد کنید">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-custom w-100 mt-4">ثبت نام</button>
+                </form>
+                <div class="text-center mt-3">
+                    <a href="/Account/Login" class="text-decoration-none text-light">حساب کاربری دارید؟ وارد شوید</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

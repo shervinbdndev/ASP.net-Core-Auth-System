@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "صفحه اصلی";
+}
+
+<div class="container text-center mt-5">
+    <h1 class="mb-4">خوش آمدید</h1>
+    <div class="d-flex justify-content-center gap-3">
+        <a href="/Account/Register" class="btn btn-lg btn-custom">ثبت نام</a>
+        <a href="/Account/Login" class="btn btn-lg btn-custom">ورود</a>
+    </div>
+</div>
+
+<style>
+    body {
+        background-color: #121212;
+        color: #ffffff;
+    }
+
+    h1 {
+        color: #ffffff;
+    }
+
+    .btn-custom {
+        background-color: #3b82f6;
+        border-color: #3b82f6;
+        color: #ffffff;
+        padding: 15px 30px;
+        border-radius: 10px;
+        font-size: 1.2rem;
+    }
+
+    .btn-custom:hover {
+        background-color: #2563eb;
+        border-color: #2563eb;
+    }
+    
+    .gap-3 {
+        gap: 15px !important;
+    }
+</style>
